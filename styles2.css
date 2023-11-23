@@ -1,0 +1,472 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&family=Quicksand:wght@600&display=swap');
+/* Root Vars  004b9e*/
+:root{
+    --color-primary:#153eb1;
+    --color-secondary:#ff0060;
+    --color-light:#153fb11b;
+    --color-bg:#f6f6f9;
+    --color-text-dark: #7b91ae;
+    --color-dark:#4a4d52;
+
+    --card-border-radius: 2rem;
+    --border-radius-1: 0.4rem;
+    --border-radius-2: 0.8rem;
+    --border-radius-3: 1.2rem;
+
+    --card-padding: 1.8rem;
+    --padding-1: 1.2rem;
+    --box-shadow: 0 2rem 3rem var(--color-light);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    appearance: none;
+    border: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 14px;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    font-family: poppins, jost, sans-serif;
+    background: var(--color-bg);
+    font-size: 0.88rem;
+    user-select: none;
+    overflow-x: hidden;
+    color: var(--color-dark);
+}
+
+.container{
+    display: grid;
+    width: 98%;
+    margin: 0 auto;
+    margin-right: 1.8rem;
+    gap: 1.8rem;
+    grid-template-columns: 14rem auto 30rem; /*change card len hori*/
+}
+
+.container .top .logo h2{
+    color: var(--color-secondary);
+}
+
+.container .top .logo img{
+    width: 2rem;
+    height: 2rem;
+    margin-right: -0.5rem;
+}
+
+
+a{
+    color: var(--color-primary);
+}
+
+img{
+    display: block;
+    width: 100%;
+}
+
+h1{
+    font-weight: 800;
+    font-size: 1.8rem;
+}
+h2{
+    font-size: 1.4rem;
+}
+h3{
+    font-size: 0.87rem;
+}
+h4{
+    font-size: 0.8rem;
+}
+h5{
+    font-size: 0.77rem;
+}
+
+small{
+    font-size: 0.75rem;
+}
+
+.profile-photo{
+    width: 2.8rem;
+    height: 2.8rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.text-muted{
+    color: var(--color-secondary);
+    justify-content: center;
+}
+
+p{
+    color: var(--color-primary);
+}
+
+b{
+    color: var(--color-primary);
+}
+
+.primary{
+    color: var(--color-primary);
+}
+.secondary{
+    color: var(--color-secondary);
+}
+
+left{
+    height: 100vh;
+}
+
+left.top{
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1.4rem;
+}
+left .logo{
+    display: flex;
+    gap: 0.8rem;
+}
+
+left .logo img{
+    width: 2rem;
+    height: 2rem;
+
+}
+
+left .close{
+    display: none;
+}
+
+/* NAVBAR */
+left .sidebar{
+
+    display: flex;
+    flex-direction: column;
+    height: 86vh;
+    position: relative;
+    top: 3rem
+}
+
+left h3{
+    font-weight: 500;
+}
+
+left .sidebar a{
+    display: flex;
+    color: var(--color-text-dark);
+    margin-left: 2rem;
+    gap: 1rem;
+    align-items: center;
+    position: relative;
+    height: 3.7rem;
+    transition: all 300ms ease;
+}
+
+left .sidebar a span{
+    font-size: 1.6rem;
+    transition: all 300ms ease;
+}
+
+left .sidebar a:last-child{
+    position: absolute;
+    bottom: 2rem;
+    width: 100%;
+}
+
+left .sidebar a.active{
+    background: var(--color-light);
+    color: var(--color-primary);
+    margin-left: 0;
+}
+
+left .sidebar a.active:before{
+    content: "";
+    width: 6px;
+    height: 100%;
+    background: var(--color-primary);
+}
+
+left .sidebar a.active span{
+    color: var(--color-primary);
+    margin-left: calc(1rem - 3px);
+}
+
+left .sidebar a:hover{
+    color: var(--color-primary);
+}
+
+left .sidebar a:hover span{
+    margin-left: 1rem;
+}
+
+/* NAVBAR END*/
+
+/* MAIN */
+main{
+    margin-top: 1.4rem;
+}
+
+main .cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.6rem;
+    text-align: center;
+    align-content: center;
+}
+
+main .cards > div{
+    background-color: white;
+    padding: var(--card-padding);
+    border-radius: var(--card-border-radius);
+    margin-top: 1.5rem;
+    box-shadow: var(--box-shadow);
+    transition: all 300ms ease;
+    align-items: center;
+}
+
+main .cards > div:hover{
+    box-shadow: none;
+}
+
+main .cards h2{
+    display: flex;
+    position: relative; /*change korechi 2lines*/
+    text-align: center;
+}
+
+main .cards .patient .pdetails-photo{
+    height: 16rem;
+    width: 14rem;
+    margin-top: 0.5rem;
+}
+
+main .cards .track .track-photo{
+    border-radius: var(--card-border-radius);
+    overflow: hidden;
+    margin-top: 0.7rem;
+    align-items: center;
+}
+
+main .cards .arriving .timeleft-photo{
+    border-radius: var(--card-border-radius);
+    overflow: hidden;
+    margin-top: 1rem ;
+    margin-left: 2rem;
+    align-items: center;
+    width: 11rem;
+}
+
+main .cards .time-left{
+    position: relative;
+    width: 92px;
+    height: 92px;
+    border-radius: 50%;
+}
+
+main .cards .time-left .number{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .cards svg{
+    width: 7rem;
+    height: 7rem;
+}
+
+main .cards svg circle{
+    fill: none;
+    stroke: var(--color-primary);
+    stroke-width: 14;
+    stroke-linecap: round;
+    transform: translate(5px,5px);
+    stroke-dasharray: 81;
+    stroke-dashoffset: 20;
+}
+
+main .cards small{
+    margin-top: 1rem; /* card niche barano */
+    display: block;
+}
+
+/*END OF CARDS*/
+main .map{
+    margin-top: 2rem;
+}
+
+main .map .map-photo{
+    background: white;
+    padding: 10px 10px 10px 10px;
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--box-shadow);
+    transition: all 300ms ease;
+}
+main .map .map-photo img{
+    border-radius: var(--card-border-radius);
+}
+
+main .map .map-photo:hover{
+    box-shadow: none;
+}
+
+main .map a{
+    text-align: center;
+    display: block;
+    margin: 1rem auto;
+    color: var(--color-secondary);
+}
+
+/* RIGHT SIDE*/
+.right{
+    margin-top: 1.4rem;
+}
+
+.right .top{
+    display: flex;
+    justify-content: end;
+    gap: 2rem;
+}
+
+.right .top button{
+    display: none;
+}
+
+.right .top .profile .profile-photo{
+    width: 3.5rem;
+    height: 3rem;
+    border-radius: 50%;
+    overflow: hidden;
+    padding: 0.3rem;
+    margin-top: -0.4rem;
+}
+
+.right .top .profile{
+    display: flex;
+    gap: 0.5rem;
+    text-align: right;
+}
+
+.right .ambu-upgrade h2{
+    margin-top: -0.6rem;
+    margin-bottom: 0.5rem;
+}
+
+.right .ambu-upgrade .upgrades{                    /*take reference*/
+    background: white;
+    padding: var(--card-padding);
+    padding-left: 1.2rem;
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--box-shadow);
+    transition: all 300ms ease;
+}
+
+.right .ambu-upgrade .upgrades .profile-photo{
+    width: 3rem;
+    height: 3.5rem;
+    border-radius: 0;
+    overflow: hidden;
+    padding: -1rem;
+    margin-top: 0.5rem;
+
+}
+.right .ambu-upgrade .upgrades .profile-photo-adv{
+    width: 3rem;
+    height: 3.5rem;
+    border-radius: 0;
+    overflow: hidden;
+    padding: -1rem;
+    margin-top: 1.8rem;
+
+}
+
+.right .ambu-upgrade .upgrades .text-muted{
+    font-size: 0.9rem;
+    padding-top: 1rem;
+}
+
+.right .ambu-upgrade .upgrades:hover{
+    box-shadow: none;
+}
+
+.right .ambu-upgrade .upgrades .upgrade{
+    display: grid;
+    grid-template-columns: 2.6rem auto;
+    gap: 1rem;
+    margin-bottom: 0.2rem;
+}
+
+/*CURRENTS DETAILS*/
+
+.right .curr-details{
+    margin-top: 2rem;
+}
+
+.right .curr-details h2{
+    margin-bottom: 0.3rem;
+}
+
+.right .curr-details h5{
+    color: #153eb1;
+    justify-content: center;
+}
+
+.right .curr-details .curr{
+    background: white;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.7rem;
+    padding: 1.4rem var(--card-padding);
+    border-radius: var(--border-radius-3);
+    box-shadow: var(--box-shadow);
+    transition: all 300ms ease;
+}
+
+.right .curr-details .curr:hover{
+    box-shadow: none;
+}
+
+.right .curr-details .curr .right{
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    margin: 0;
+    width: 100%;
+}
+
+.right .curr-details .curr .icon{
+    padding: 0.6rem;
+    color: white;
+    border-radius: 50%;
+    background: var(--color-primary);
+    display: flex;
+}
+
+.right .curr-details .search{
+    background-color: transparent;
+    border: 2px dashed var(--color-primary);
+    color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right .curr-details .search div{
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}

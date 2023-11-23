@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>SirenSync</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="left-side">
+      <div class="heading-left">
+       Get Started Now
+      </div>
+      <div class="innertext">
+        Enter your credentials to access your account.
+      </div>
+      <button type="button" name="button" class="btn-primary btn5">Sign In with Google</button>
+      <button type="button" name="button" class="btn-secondary btn6">Log In with Google</button>
+      <div class="line">
+      </div>
+    <div class="or">
+      or
+    </div>
+     <div class="line1">
+     </div>
+     <div class="account">
+       <form action="action_page.php" id="signupForm" method="post">
+   <div class="container">
+     <h1>Sign Up</h1>
+
+     <label for="email"><b>Email</b></label>
+     <input type="text" placeholder="Enter Email" name="email" required>
+
+     <label for="psw"><b>Password</b></label>
+     <input type="password" placeholder="Enter Password" name="psw" required>
+
+     <label for="psw-repeat"><b>Repeat Password</b></label>
+     <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+
+     <label>
+       <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+     </label>
+
+     <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+     <div class="clearfix">
+       <button type="button" class="cancelbtn btn7">Cancel</button>
+       <button type="submit" class="signupbtn btn7">Sign Up</button>
+     </div>
+   </div>
+ </form>
+     </div>
+
+    </div>
+
+     <div class="right-side">
+        <div class="right- text text4">
+          Sign up with <br> SirenSync today!
+        </div>
+        <div class="right- text text5">
+          Join SirenSync and be a heartbeat away from safety - because every second counts when it comes to your well-being!
+        </div>
+        <img src="signup.png" alt="" class='right-img'>
+     </div>
+
+ <script>
+   document.getElementById("signupForm").addEventListener("submit", function(event) {
+     // Prevent the form from submitting immediately
+     event.preventDefault();
+
+     // Perform any form validation or other actions here
+
+     // Redirect to dashboard after form submission
+     window.location.href = "dashboard.html";
+   });
+ </script>
+  </body>
+</html>

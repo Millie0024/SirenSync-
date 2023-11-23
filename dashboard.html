@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sirensync Dashboard</title>
+    <!--Material Icons-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+    <!--Left Side Bar-->
+    <div class="container">
+        <left>
+            <div class="top">
+                <div class="logo">
+                    <img src="ambulance.png">
+                    <h2>SirenSync</h2>
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-icons-round">close</span>
+                </div>
+                <!--Side Bar Toggle-->
+                <div class="sidebar">
+                    <a href="#" class="active">
+                        <span class="material-icons-round">dashboard</span>
+                        <h3>Dashboard</h3>
+                    </a>
+                    <a href="#">
+                        <span class="material-icons-round">local_shipping</span>
+                        <h3>Ambulance</h3>
+                    </a>
+                    <a href="#">
+                        <span class="material-icons-round">notifications</span>
+                        <h3>Notifications</h3>
+                    </a>
+                    <a href="#">
+                        <span class="material-icons-round">schedule</span>
+                        <h3>Appointments</h3>
+                    </a>
+                    <a href="#">
+                        <span class="material-icons-round">medical_services</span>
+                        <h3>Med History</h3>
+                    </a>
+                    <a href="#">
+                        <span class="material-icons-round">payment</span>
+                        <h3>Payment</h3>
+                    </a>
+                    <a href="#">
+                        <span class="material-icons-round">star</span>
+                        <h3>Review</h3>
+                    </a>
+                    <a href="#">
+                        <span class="material-icons-round">settings</span>
+                        <h3>Settings</h3>
+                    </a>
+                    <a href="#">
+                        <span class="material-icons-round">logout</span>
+                        <h3>Log Out</h3>
+                    </a>
+                </div>
+            </div>
+        </left>
+        <!--END NAVBAR-->
+        <main>
+            <h1>Dashboard</h1>
+            <div class="cards">
+                <div class="patient">
+                    <h2>Patient Details</h2>
+                    <div class="pdetails-photo">
+                        <img src="patdet.png">
+                    </div>
+                </div>
+                <div class="track">
+                    <h2>Track</h2>
+                    <div class="track-photo">
+                        <img src="track.png">
+                    </div>
+                </div>
+                <div class="arriving">
+                    <h2>Arriving</h2>
+                    <div class="timeleft-photo">
+                        <img src="timeleft.png">
+                    </div>
+                </div>
+            </div>
+            <!--END of CARDS-->
+            <div class="map">
+                <h2>Track Ambulance</h2>
+                <div class="map-photo">
+                    <img src="map.png">
+                </div>
+                <a href="#">Show in Maps</a>
+            </div>
+        </main>
+        <!--END OF MAIN-->
+
+        <div class="right">
+            <div class="top">
+                <button id = "menu-btn">
+                    <span class="material-icons-round">menu</span>
+                </button>
+                <div class="profile">
+                    <div class="info">
+                        <p>Sumedha Basu</p>
+                        <small class="text-muted">Patient</small>
+                    </div>
+                    <div class="profile-photo">
+                        <img src="patient.png">
+                    </div>
+                </div>
+            </div>
+            <div class="ambu-upgrade">
+                <h2>Ambulance Upgrade</h2>
+                <div class="upgrades">
+                    <div class="upgrade">
+                        <div class="profile-photo">
+                            <img src="basic.png">
+                        </div>
+                        <div class="ambu-type">
+                            <p><b>Basic Life Support </b>Offers CPR, oxygen administration, wound management along with trained personel.</p>
+                            <small class="text-muted">Rs. 500</small>
+                        </div>
+                    </div>
+                    <div class="upgrade">
+                        <div class="profile-photo-adv">
+                            <img src="advance.png">
+                        </div>
+                        <div class="ambu-type" >
+                            <p><b>Advance Life Support </b>Offers cardiac monitors, defibrillators, ventilators, along with skilled paramedics.</p>
+                            <small class="text-muted">Rs. 1500</small>
+                        </div>
+                    </div>
+                    <div class="upgrade">
+                        <div class="profile-photo">
+                            <img src="icu.png">
+                        </div>
+                        <div class="ambu-type">
+                            <p><b>Mobile ICU</b> Offers critical care interventions, cardiac monitoring, ventilator support, advanced medication administration along with a specialized medical team.</p>
+                            <small class="text-muted">Rs. 3500</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--END AMBU-UPGRADES-->
+
+            <div class="curr-details">
+                <h2>Current Details</h2>
+                <div class="curr driver">
+                    <div class="icon">
+                        <span class="material-icons-round">face</span>
+                    </div>
+                    <div class="right">
+                        <div class="info">
+                            <h3>DRIVER DETAILS</h3>
+                            <small class="text-muted">Sachin</small>
+                        </div>
+                        <h5>9007898767</h5>
+                        <h3>4.5</h3>
+                    </div>
+                </div>
+                <div class="curr ambulance">
+                    <div class="icon">
+                        <span class="material-icons-round">local_shipping</span>
+                    </div>
+                    <div class="right">
+                        <div class="info">
+                            <h3>AMBULANCE DETAILS</h3>
+                            <small class="text-muted">WB07865</small>
+                        </div>
+                        <h5>Incoming</h5>
+                        <h3>Basic</h3>
+                    </div>
+                </div>
+                <div class="curr doctor">
+                    <div class="icon">
+                        <span class="material-icons-round">diversity_1</span>
+                    </div>
+                    <div class="right">
+                        <div class="info">
+                            <h3>DOCTOR DETAILS</h3>
+                            <small class="text-muted">Dr.Soham Basu, Cardiologist</small>
+                        </div>
+                        <h5>8507898767</h5>
+                        <h3>Apollo Hos</h3>
+                    </div>
+                </div>
+
+                <div class="curr search">
+                    <span class="material-icons-round">search</span>
+                    <h3>Search Doctor/Hospital</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
